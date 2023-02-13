@@ -51,10 +51,9 @@ app.get("/posts/:posttitle", (req, res) => {
     let postTitle = _.lowerCase(post.title);
     if (postTitle.includes(reqTitle)) {
       res.render("post", {postTitle: post.title, postContent: post.content });
-    } else {
-      console.log("No match!");
     }
   })
+  res.render("post", {postTitle: "Oops", postContent: "This post does not exist"});
 })
 
 
