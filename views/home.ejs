@@ -1,6 +1,7 @@
 <%- include("partials/header") -%>
 
 <h1>Home</h1>
+<p> <%= initialContent %></p>
 
 <% allPosts.forEach(function(post) { %>
     <h4 id="title-<%= i %>"><%= post.title %></h3>
