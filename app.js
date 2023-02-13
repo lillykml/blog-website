@@ -28,6 +28,19 @@ app.get("/contact", (req, res) => {
   res.render("contact", {contactInfo: contactContent});
 })
 
+app.get("/compose", (req, res) => {
+  res.render("compose");
+})
+
+app.post("/compose", (req, res) => {
+  let post = {
+    title: req.body.postTitle,
+    content: req.body.newPost
+  }
+  console.log(post);
+  res.redirect("/");
+})
+
 
 
 
